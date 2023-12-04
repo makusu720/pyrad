@@ -13,6 +13,11 @@ import struct
 from pyrad import host
 from pyrad import packet
 
+from pyrad import poll
+poll.install()
+poller = select.poll()
+poller.register(...)
+
 EAP_CODE_REQUEST = 1
 EAP_CODE_RESPONSE = 2
 EAP_TYPE_IDENTITY = 1

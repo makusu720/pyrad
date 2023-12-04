@@ -10,6 +10,10 @@ from pyrad import packet
 import select
 import socket
 
+from pyrad import poll
+poll.install()
+poller = select.poll()
+poller.register(...)
 
 class Proxy(Server):
     """Base class for RADIUS proxies.

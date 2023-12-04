@@ -8,6 +8,10 @@ from pyrad import host
 from pyrad import packet
 import logging
 
+from pyrad import poll
+poll.install()
+poller = select.poll()
+poller.register(...)
 
 logger = logging.getLogger('pyrad')
 
